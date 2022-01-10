@@ -350,13 +350,12 @@ body {
     bottom: 0;
     right: 0;
     background-color: #00000090;
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(0.8);
     transition: 0.5s;
+    pointer-events: stroke;
 }
 
 .show {
@@ -392,6 +391,7 @@ body {
     position: absolute;
     top: -41px;
     right: 0;
+    cursor: pointer;
 }
 
 .gallery-close i {
@@ -408,6 +408,7 @@ body {
 .gallery-items-img {
     width: 84px;
     height: 84px;
+    cursor: pointer;
 }
 
 .gallery-items-img img {
@@ -424,12 +425,14 @@ body {
     position: absolute;
     top: 50%;
     left: 0;
+    cursor: pointer;
 }
 
 .gallery-controle-next {
     position: absolute;
     top: 50%;
     right: 0;
+    cursor: pointer;
 }
 
 /* for js big image of gallery */

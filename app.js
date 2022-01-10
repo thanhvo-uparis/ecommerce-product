@@ -16,46 +16,17 @@ const allSmallImagesMainPage = document.querySelectorAll(
       productPageBigImage.src = img.src.replace("-thumbnail", "");
     });
   });
-// end-change big image of gallery
 
-const images = document.querySelectorAll('.left_product-item img')
-const gallery = document.querySelector('.left-gallery')
-const galleryImg = document.querySelector('.gallery-inner img')
-const close = document.querySelector('.gallery-close')
+//close lightbox
+    const closeLightboxBtn = document.querySelector(".gallery-close");
+    const lightbox = document.querySelector(".left-gallery");
 
-const next = document.querySelector('.gallery-controle-next')
-const prev = document.querySelector('.gallery-controle-prev')
+    const closeLightbox = () => {
+        lightbox.style.display = "none";
+    };
+    closeLightboxBtn.addEventListener("click", closeLightbox);
 
-let currentIndex = 0
-
-galleryImg.forEach((img, index) => {
-	img.addEventListener('click', () => {
-		currentIndex = index
-		showGallery()
-	})
-})
-
-function showGallery() {
-	currentIndex == galleryImg.length - 1
-		? next.classList.add('hide')
-		: next.classList.remove('hide')
-
-	currentIndex == 0 ? prev.classList.add('hide') : prev.classList.remove('hide')
-
-	gallery.classList.add('show')
-	galleryImg.src = galleryImg[currentIndex].src
-}
-/*
-close.addEventListener('click', () => {
-	gallery.classList.remove('show')
-})
-
-next.addEventListener('click', () => {
-	currentIndex != images.length - 1 ? currentIndex++ : undefined
-	showGallery()
-})
-prev.addEventListener('click', () => {
-	currentIndex != 0 ? currentIndex-- : undefined
-	showGallery()
-})
-*/
+// open lightbox
+    productPageBigImage.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+    });
