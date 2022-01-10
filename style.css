@@ -20,6 +20,8 @@ html {
 
 body {
     height: 100vh;
+    font-size: 1rem;
+    font-weight: 400;
     margin: 0px 10%;
     background-color: hsl(223, 64%, 98%);
 }
@@ -224,6 +226,12 @@ body {
     width: 40%;
 }
 
+.main-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .right-info-company {
     font-size: 0.95rem;
     font-weight: 700;
@@ -267,14 +275,14 @@ body {
 }
 
 .right-bottom {
+    height: 60px; 
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
 .right-bottom-quantily {
-    width: 206px;
-    height: 58px;
+    flex-basis: 35%;
     background-color: hsl(0deg 0% 92%);
     border-radius: 14px;
     font-weight: 700;
@@ -282,6 +290,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 14px;
+    margin-right: 20px;
 }
 
 .quantily-icons:hover {
@@ -289,16 +298,15 @@ body {
 }
 
 .right-bottom-btn {
-    width: 380px;
-    height: 60px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
     background-color: var(--orange);
     border: none;
-    border-radius: 8px;
+    border-radius: 14px;
     color: hsl(0, 0%, 100%);
     display: flex;
+    flex-basis: 65%;
     justify-content: center;
     align-items: center;
     box-shadow: 0 10px 40px hsl(26deg 100% 55% / 50%);
@@ -320,7 +328,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
 }
 
 .gallery-container {
