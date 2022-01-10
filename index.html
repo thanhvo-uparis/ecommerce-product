@@ -26,6 +26,7 @@
          <div class="navbar-right">
               <div class="navbar_cart">
                 <img src="./images/icon-cart.svg" alt="">
+                <div class="item-counter"></div>
               </div>
               <div class="navbar_profil">
                 <img src="./images/me-avatar.jpg" alt="">
@@ -36,7 +37,8 @@
                         <p>Cart</p>
                     </div>
                     <div class="cart_content">
-                        <div class="cart_content-image">
+                        <p class="empty-cart-txt">Your cart is empty.</p>
+                        <!-- <div class="cart_content-image">
                           <img src="./images/image-product-1.jpg" alt="">
                         </div>
                           <div class="cart_content-description">
@@ -45,11 +47,11 @@
                           </div>
                           <div class="cart_content-delete">
                               <img src="./images/icon-delete.svg" alt="">
-                          </div>
+                          </div> -->
                     </div>
-                    <div class="cart_footer">
+                    <!-- <div class="cart_footer">
                          <button class="cart_footer-btn">Checkout</button>
-                    </div>
+                    </div> -->
               </div>
               <!-- cart popup end-->
          </div>
@@ -131,9 +133,9 @@
               </div>
               <div class="right-bottom">
                 <div class="right-bottom-quantily">
-                    <img class="quantily-icons" src="./images/icon-minus.svg" alt="">
-                    <p>0</p>
-                    <img class="quantily-icons" src="./images/icon-plus.svg" alt="">
+                    <img class="quantily-icons minus" src="./images/icon-minus.svg" alt="">
+                    <p class="qty">0</p>
+                    <img class="quantily-icons plus" src="./images/icon-plus.svg" alt="">
                 </div>
                 <button class="right-bottom-btn">
                     <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -149,5 +151,6 @@
       </div>
     </div>
     <script src="./app.js"></script>
+    <script src="./cart.js"></script>
 </body>
 </html>
