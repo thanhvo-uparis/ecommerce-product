@@ -1,3 +1,4 @@
+//minus and plus for qty
 let itemQty = 0;
 
 const qty = document.querySelector(".qty");
@@ -43,30 +44,30 @@ const basketContent = document.querySelector(".cart_content");
 
 addToCartBtn.addEventListener("click", () => {
   if (itemQty > 0) {
-    // reset the cart
+   
     basketContent.innerHTML = ``;
-    // create the template
+    
     const cartItemTemplate = `
-              <div class="cart_content-image">
-                    <img src="./images/image-product-1.jpg" alt="">
-               </div>
-              <div class="cart_content-description">
-                    <p>Fall Limited Edition Sneakers</p>
-                    <p>$125.00 x ${itemQty} ${(itemQty * 125).toFixed(2)}</p>
-              </div>
-              <div class="cart_content-delete">
-                   <img src="./images/icon-delete.svg" alt="">
-              </div>
+                  <div class="cart_content-image">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="">
+                  </div>
+                  <div class="cart_content-description">
+                        <p>Fall Limited Edition Sneakers</p>
+                        <p class="cart_content-price-total">$125.00 x ${itemQty} <span class="price-total">$${(itemQty * 125).toFixed(2)}</span></p>
+                  </div>
+                  <div class="cart_content-delete">
+                      <img src="./images/icon-delete.svg" alt="">
+                  </div>
               `;
     const template = document.createElement("div");
     const btn = document.createElement("div");
-    btn.classList.add("right-bottom-btn");
+    btn.classList.add("cart_footer-btn");
     btn.textContent = "Checkout";
     btn.style.marginTop = "10px";
     template.cloneNode(false);
     template.classList.add("cart-item");
     template.innerHTML = cartItemTemplate;
-    // Append template
+   
     basketContent.append(template);
     basketContent.append(btn);
 
