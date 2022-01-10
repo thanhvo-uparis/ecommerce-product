@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,100&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
       <link rel="stylesheet" href="./style.css">
       <title>E-commerce product</title>
 </head>
@@ -80,12 +78,42 @@
                  </div>
                   </div>
               </div>
+              <div class="left-gallery">
+                  <div class="gallery-container">
+                      <div class="gallery-close">
+                           <i class="fas fa-times"></i>
+                      </div>
+                      <div class="gallery-inner">
+                          <img src="./images/image-product-1.jpg" alt="">
+                          <div class="gallery-controles">
+                              <div class="gallery-controle-prev">
+                                   <i class="fas fa-chevron-left"></i>
+                              </div>
+                              <div class="gallery-controle-next">
+                                   <i class="fas fa-chevron-right"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="gallery-items">
+                          <div class="gallery-items-img">
+                              <img src="./images/image-product-2.jpg" alt="">
+                          </div>
+                          <div class="gallery-items-img">
+                            <img src="./images/image-product-3.jpg" alt="">
+                          </div>
+                          <div class="gallery-items-img">
+                            <img src="./images/image-product-2.jpg" alt="">
+                          </div>
+                          <div class="gallery-items-img">
+                            <img src="./images/image-product-4.jpg" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
           <!-- main left end -->
 
           <!-- main right -->
-          
-          <!-- main right end-->
           <div class="main-right">
               <div class="right-info">
                 <p class="right-info-company">SNEAKER COMPANY</p>
@@ -108,11 +136,16 @@
                     <img class="quantily-icons" src="./images/icon-plus.svg" alt="">
                 </div>
                 <button class="right-bottom-btn">
-                   <img src="./images/icon-cart.svg" alt="">
-                   Add to cart
+                    <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                      />
+                    </svg>
+                    Add to cart
                 </button>
               </div>
           </div>
+          <!-- main right end -->
       </div>
     </div>
 
