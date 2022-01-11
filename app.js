@@ -34,13 +34,13 @@
     });
 
 //left btn
-    const lightboxBigImage = document.querySelector(".gallery-inner img");       
+    const lightboxBigImage = document.querySelector(".gallery-inner-image");       
     const lightboxLeftBtn = document.querySelector(".gallery-controle-prev");
     
     let startIndex = 0;
     
     lightboxLeftBtn.addEventListener("click", () => {
-    const images = document.querySelectorAll(".gallery-items-img img");
+    const images = document.querySelectorAll(".gallery-items-img");
 
     // // Find the img with the active class
     images.forEach((img, i) => {
@@ -57,3 +57,44 @@
     let item = images[startIndex].querySelector("img");
     lightboxBigImage.src = item.src.replace("-thumbnail", "");
     });
+
+    //btn right
+    const lightboxRightBtn = document.querySelector(".gallery-controle-next");
+
+    lightboxRightBtn.addEventListener("click", () => {
+      const images = document.querySelectorAll(".gallery-items-img");
+    
+      // // Find the img with the active class
+      images.forEach((img, i) => {
+        if (img.classList.contains("gallery-items-img-active")) {
+          startIndex = i;
+          img.classList.remove("gallery-items-img-active");
+        }
+      });
+      if (startIndex < images.length - 1) {
+        startIndex++;
+      }
+      images[startIndex].classList.add("gallery-items-img-active");
+    
+      let item = images[startIndex].querySelector("img");
+      lightboxBigImage.src = item.src.replace("-thumbnail", "");
+    });
+
+    //change the big image of lightbox
+    const allLightboxImages = document.querySelectorAll(
+      ".gallery-items img"
+    );
+    allLightboxImages.forEach((image, index) =>
+    image.addEventListener("click", (e) => {
+      //  remove all bg from parent
+      allLightboxImages.forEach((img) => {
+        img.parentElement.classList.remove("gallery-items-img-active");
+      });
+      allLightboxImages[index].parentElement.classList.add(
+        "gallery-items-img-active"
+      );
+      lightboxBigImage.src = e.target
+        .getAttribute("src")
+        .replace("-thumbnail", "");
+    })
+  );
