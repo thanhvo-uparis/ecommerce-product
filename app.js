@@ -33,7 +33,7 @@
         lightbox.style.display = "flex";
     });
 
-//left btn
+// left btn
     const lightboxBigImage = document.querySelector(".gallery-inner-image");       
     const lightboxLeftBtn = document.querySelector(".gallery-controle-prev");
     
@@ -42,7 +42,7 @@
     lightboxLeftBtn.addEventListener("click", () => {
     const images = document.querySelectorAll(".gallery-items-img");
 
-    // // Find the img with the active class
+    // Find the img with the active class
     images.forEach((img, i) => {
         if (img.classList.contains("gallery-items-img-active")) {
         startIndex = i;
@@ -58,13 +58,13 @@
     lightboxBigImage.src = item.src.replace("-thumbnail", "");
     });
 
-    //btn right
+    // btn right
     const lightboxRightBtn = document.querySelector(".gallery-controle-next");
 
     lightboxRightBtn.addEventListener("click", () => {
       const images = document.querySelectorAll(".gallery-items-img");
     
-      // // Find the img with the active class
+      // Find the img with the active class
       images.forEach((img, i) => {
         if (img.classList.contains("gallery-items-img-active")) {
           startIndex = i;
@@ -80,13 +80,13 @@
       lightboxBigImage.src = item.src.replace("-thumbnail", "");
     });
 
-    //change the big image of lightbox
+    // change the big image of lightbox
     const allLightboxImages = document.querySelectorAll(
       ".gallery-items img"
     );
+
     allLightboxImages.forEach((image, index) =>
     image.addEventListener("click", (e) => {
-      //  remove all bg from parent
       allLightboxImages.forEach((img) => {
         img.parentElement.classList.remove("gallery-items-img-active");
       });
